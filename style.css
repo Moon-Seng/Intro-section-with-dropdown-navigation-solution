@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+
+/* NavBar */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo{
+    margin-left: 1rem;
+}
+
+.nav-items{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Nav */
+
+.left-nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-item{
+    color: hsl(0, 0%, 41%);
+    user-select: none;
+}
+
+.nav-item:hover{
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.nav-item p{
+    margin-bottom: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.dropdown-list{
+    position: absolute;
+    list-style: none;
+    padding: 1.5rem;
+    color: hsl(0, 0%, 41%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 40px hsla(0, 0%, 41%, 0.3);
+}
+
+.dropdown-list li:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.feature .dropdown-list{
+    margin: 1rem 2rem 1rem -2rem;
+}
+
+.company .dropdown-list{
+    margin: 1rem 2rem 1rem 0;
+}
+
+.dropdown-list li.margin{
+    margin: .5rem 0;
+}
+
+.dropdown-list li img{
+    margin-right: .5rem;
+}
+
+/* Right Nav */
+
+.right-nav{
+    display: flex;
+    color: hsl(0, 0%, 41%);
+}
+
+.login{
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.login:hover{
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.register{
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 41%);
+}
+
+.register:hover{
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 993px) {
+
+    .nav-items{
+        justify-content: flex-end;
+    }
+
+    .left-nav{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    nav{
+        padding: 1.5rem 1rem ;
+    }
+
+    .nav-items{
+    }
+
+    .left-nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        background-color: red;
+    }
+}
