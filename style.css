@@ -113,9 +113,10 @@ nav{
 }
 
 .register{
-    padding: 1rem 2rem;
+    padding: .8rem 1rem;
     border-radius: 20px;
     border: 1px solid hsl(0, 0%, 41%);
+    height: fit-content;
 }
 
 .register:hover{
@@ -123,6 +124,62 @@ nav{
     border: 1px solid hsl(0, 0%, 8%);
     cursor: pointer;
 }
+
+/* Content */
+
+.box{
+    display: flex;
+    flex-direction: row;
+    padding: 0 5rem;
+}
+
+/* Text Content */
+
+.text-content{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content h1{
+    margin-top: 3rem;
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.text-content p{
+    color: hsl(0, 0%, 41%);
+    margin: 3rem 0;
+}
+
+.text-content button{
+    width: fit-content;
+    padding: .7rem 1rem;
+    color: hsl(0, 0%, 98%);
+    background-color: black;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.text-content button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Sponsor */
+.sponsor{
+    display: flex;
+    margin-top: 3rem;
+}
+
+/* Image Content */
+
+.img-content img{
+    width: 100%;
+}
+
+
 
 @media screen and (max-width: 993px) {
 
@@ -133,12 +190,38 @@ nav{
     .left-nav{
         width: 90%;
     }
+
+    .box{
+        flex-direction: column;
+    }
+
+    .text-content h1{
+        font-size: 55px;
+    }
+
+    .text-content p{
+        font-size: 28px;
+    }
+
+    .text-content button{
+        font-size: 24px;
+    }
+
+    .sponsor{
+        margin: 2rem auto  4rem auto;
+    }
+
+    .img-content img{
+        margin-top: 4rem;
+    }
 }
 
 @media screen and (max-width: 475px) {
     body{
         height: 100vh
     }
+
+    /* NavBar */
     nav{
         padding: 1.5rem 1rem ;
     }
@@ -165,7 +248,7 @@ nav{
     }
 
     .nav-item{
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; 
     }
 
     .dropdown-list{
@@ -181,4 +264,46 @@ nav{
     #features-dropdown-arrow , #company-dropdown-arrow{
         margin-left: .5rem;
     }
+
+    .box{
+        padding: 0;
+    }
+    /* image-content */
+
+    .img-content img{
+        margin-top: 0;
+    }
+
+    /* Text-content */
+
+    .text-content{
+        text-align: center;
+        justify-content: flex-start;
+        height: fit-content;
+    }
+
+    .text-content h1{
+        margin-top: 3rem;
+        font-size: 35px;
+    }
+
+    .text-content p{
+        font-size: 16px;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .text-content button{
+        margin: auto;
+        font-size: 16px;
+    }
+
+    /* Sponsor */
+
+    .sponsor .col-3 img{
+        width: 100%;
+        padding: 10px;
+    }
+
+    
 }

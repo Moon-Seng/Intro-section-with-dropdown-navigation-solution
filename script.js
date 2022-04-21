@@ -9,8 +9,9 @@ let navItems = document.getElementById('nav-items');
 let openBtn = document.querySelector('.menu-btn');
 let closeBtn = document.querySelector('.close-menu');
 let body = document.body;
+let image = document.getElementById('changingImg');
 
-
+console.log(image);
 
 featuresDropdownBtn.addEventListener('click', function(){
     featuresToggleDropdown.classList.toggle('hidden');
@@ -33,16 +34,16 @@ companyDropdownBtn.addEventListener('click', function(){
 
 if(screenSize < 768){
     navItems.classList.add('hidden');
+    image.src = "http://127.0.0.1:8080/images/image-hero-mobile.png"
 }
 
 openBtn.addEventListener('click', function(){
     navItems.classList.remove('hidden');
-    body.style.backgroundColor= "hsla(0, 0%, 8%, 30%)"
     closeBtn.classList.remove('hidden');
 })
 
 closeBtn.addEventListener('click' , function(){
     navItems.classList.add('hidden');
     body.style.backgroundColor= "hsla(0, 0%, 8%, 0%)"
-    
+
 })
