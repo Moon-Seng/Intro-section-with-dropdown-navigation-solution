@@ -37,7 +37,12 @@ nav{
 
 .left-nav{
     width: 50%;
+    
+}
+
+.left-nav-area{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -131,20 +136,49 @@ nav{
 }
 
 @media screen and (max-width: 475px) {
+    body{
+        height: 100vh
+    }
     nav{
         padding: 1.5rem 1rem ;
     }
 
-    .nav-items{
+    .close-menu{
+        padding: 1.5rem 1rem;
+        float: right;
     }
 
     .left-nav{
         position: absolute;
         top: 0;
         right: 0;
-        flex-direction: column;
         width: 60%;
         height: 100vh;
-        background-color: red;
+        background-color: white;
+    }
+
+    .left-nav-area{
+        margin-top: 5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2rem;
+    }
+
+    .nav-item{
+        margin-bottom: 1rem;
+    }
+
+    .dropdown-list{
+        position: relative;
+        box-shadow: none;
+        padding: 1rem;
+    }
+    
+    .feature .dropdown-list , .company .dropdown-list{
+        margin: 0; 
+    }
+
+    #features-dropdown-arrow , #company-dropdown-arrow{
+        margin-left: .5rem;
     }
 }

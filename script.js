@@ -7,6 +7,29 @@ let companyDropdownArrow = document.getElementById('company-dropdown-arrow');
 let screenSize = window.innerWidth;
 let navItems = document.getElementById('nav-items');
 let openBtn = document.querySelector('.menu-btn');
+let closeBtn = document.querySelector('.close-menu');
+let body = document.body;
+
+
+
+featuresDropdownBtn.addEventListener('click', function(){
+    featuresToggleDropdown.classList.toggle('hidden');
+    if(featuresDropdownArrow.src === 'http://127.0.0.1:8080/images/icon-arrow-up.svg'){
+        featuresDropdownArrow.src = 'http://127.0.0.1:8080/images/icon-arrow-down.svg'
+    }else if(featuresDropdownArrow.src === 'http://127.0.0.1:8080/images/icon-arrow-down.svg'){
+        featuresDropdownArrow.src = 'http://127.0.0.1:8080/images/icon-arrow-up.svg';
+    }
+
+})
+
+companyDropdownBtn.addEventListener('click', function(){
+    companyToggleDropdown.classList.toggle('hidden');
+    if(companyDropdownArrow.src === 'http://127.0.0.1:8080/images/icon-arrow-up.svg'){
+        companyDropdownArrow.src = 'http://127.0.0.1:8080/images/icon-arrow-down.svg'
+    }else{
+        companyDropdownArrow.src = 'http://127.0.0.1:8080/images/icon-arrow-up.svg';
+    }
+})
 
 if(screenSize < 768){
     navItems.classList.add('hidden');
@@ -14,23 +37,12 @@ if(screenSize < 768){
 
 openBtn.addEventListener('click', function(){
     navItems.classList.remove('hidden');
+    body.style.backgroundColor= "hsla(0, 0%, 8%, 30%)"
+    closeBtn.classList.remove('hidden');
 })
 
-featuresDropdownBtn.addEventListener('click', function(){
-    featuresToggleDropdown.classList.toggle('hidden');
-    if(featuresDropdownArrow.src === 'http://127.0.0.1:5500/images/icon-arrow-up.svg'){
-        featuresDropdownArrow.src = 'http://127.0.0.1:5500/images/icon-arrow-down.svg'
-    }else{
-        featuresDropdownArrow.src = 'http://127.0.0.1:5500/images/icon-arrow-up.svg';
-    }
-
-})
-
-companyDropdownBtn.addEventListener('click', function(){
-    companyToggleDropdown.classList.toggle('hidden');
-    if(companyDropdownArrow.src === 'http://127.0.0.1:5500/images/icon-arrow-up.svg'){
-        companyDropdownArrow.src = 'http://127.0.0.1:5500/images/icon-arrow-down.svg'
-    }else{
-        companyDropdownArrow.src = 'http://127.0.0.1:5500/images/icon-arrow-up.svg';
-    }
+closeBtn.addEventListener('click' , function(){
+    navItems.classList.add('hidden');
+    body.style.backgroundColor= "hsla(0, 0%, 8%, 0%)"
+    
 })
